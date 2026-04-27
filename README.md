@@ -3,7 +3,7 @@ my go to guide to setting up a python project and include a barebone openai exec
 
 ## Activating a Virtual Environment in Windows
 
-python -m venv .venv
+```python -m venv .venv```
 ```.venc\Scripts\activate```
 
 ## Install dependencies
