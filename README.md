@@ -19,4 +19,4 @@ python -m venv .venv
 # Check is image is available
 ```docker exec -it ollama ollama list```
 # Explicitly download the image
-```docker exec -it ollama ollama pull gemma4:latest
+```docker exec -it ollama ollama pull gemma4:latest```
