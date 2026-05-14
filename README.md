@@ -4,7 +4,7 @@ my go to guide to setting up a python project and include a barebone openai exec
 ## Activating a Virtual Environment in Windows
 
 ```python -m venv .venv```
-```.venc\Scripts\activate```
+```.venv\Scripts\activate```
 
 ## Install dependencies
 ```pip install openai```
@@ -20,3 +20,8 @@ my go to guide to setting up a python project and include a barebone openai exec
 ```docker exec -it ollama ollama list```
 # Explicitly download the image
 ```docker exec -it ollama ollama pull gemma4:latest```
+
+# Run Claude CLI with local model running on docker #
+Have quen3.6 model downloaded and up and running on ollama
+execute claude in your desired directory
+```ollama launch claude --model qwen3.6:latest```
