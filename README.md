@@ -16,12 +16,12 @@ my go to guide to setting up a python project and include a barebone openai exec
 ```docker run -d --gpus=all -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama```
 
 ## If ollama image is not found, explicity download the image
-# Check is image is available
+## Check is image is available
 ```docker exec -it ollama ollama list```
-# Explicitly download the image
+## Explicitly download the image
 ```docker exec -it ollama ollama pull gemma4:latest```
 
-# Run Claude CLI with local model running on docker #
+## Run Claude CLI with local model running on docker #
 Have quen3.6 model downloaded and up and running on ollama
 execute claude in your desired directory
 ```ollama launch claude --model qwen3.6:latest```
