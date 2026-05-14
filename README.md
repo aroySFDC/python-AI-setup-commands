@@ -1,4 +1,4 @@
-# python-getting-started
+# AI setup for python based Agentic Workflow Development
 my go to guide to setting up a python project and include a barebone openai execution
 
 ## Activating a Virtual Environment in Windows
