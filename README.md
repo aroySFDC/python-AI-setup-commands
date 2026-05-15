@@ -41,7 +41,7 @@ Run the command to check the model status after ollama is up and running
 ```ollama ps```
 
 Check the context length, usually it will be around 4000, however it is insufficient for claude cli operations as it requires upwards of 65k context window.
-To increase the context length to 65k we need to create a model file with the following content
+To increase the context length to 65k we need to create a model file (filename 'ModelFile' with no extension) with the following content
 ```
 dockerfile
 FROM qwen3.6:latest
@@ -50,9 +50,11 @@ PARAMETER num_ctx 65000
 Run the model
 
 ```ollama create qwen3.6-arch -f ModelFile```
+
 ```ollama run qwen 3.6-arch```
 
 verify that the model is up and running
 Execute claude
+
 ```ollama launch claude --model qwen3.6-arch```
 
