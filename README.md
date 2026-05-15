@@ -25,6 +25,34 @@ If ollama image is not found, explicity download the image
 Have qwen3.6 model downloaded and up and running on ollama
 Install Claude Code via terminal:
 Mac/Linux/WSL: ```curl -fsSL https://claude.ai/install.sh | bash.```
+
 Windows (PowerShell): ```irm https://claude.ai/install.ps1 | iex```
+
 execute claude in your desired directory
 ```ollama launch claude --model qwen3.6:latest```
+
+## Connect Ollama local LLM model with Claude CLI
+The process described below is to connect the local ollama model with claude cli, this approach will require you to set ollama as a docker image and it is a pre-requisite
+
+Install Claude CLI
+Download latest qwen model in ollama
+
+Run the command to check the model status after ollama is up and running
+```ollama ps```
+
+Check the context length, usually it will be around 4000, however it is insufficient for claude cli operations as it requires upwards of 65k context window.
+To increase the context length to 65k we need to create a model file with the following content
+```
+dockerfile
+FROM qwen3.6:latest
+PARAMETER num_ctx 65000
+```
+Run the model
+
+```ollama create qwen3.6-arch -f ModelFile```
+```ollama run qwen 3.6-arch```
+
+verify that the model is up and running
+Execute claude
+```ollama launch claude --model qwen3.6-arch```
+
